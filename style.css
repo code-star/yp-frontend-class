@@ -1,12 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400);
 
 html {
-  font-family: 'Lato', helvetica, arial, sans-serif;
+  font-family: 'PT Sans', helvetica, arial, sans-serif;
   font-weight: 300;
-  color: #000;
+  color: #009;
 }
 .container {
-    width: 1024px;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     border: 1px dashed #ccc;
@@ -28,26 +28,62 @@ nav ul{
 nav ul li a{
   text-decoration: none;
   float: left;
-  margin-right: 20px;
+  margin-right: 1em;
   color: #ffffff;
   line-height: 30px;
 }
 
 section#mainContent {
-  margin-top: 20px;
+  margin-top: 1em;
   clear: both;
 }
 
 footer {
   background: #e98300;
-  height: 25px;
+  height: 1.5em;
   width: 100%;
-  padding: 20px 0;
+  padding: 1em 0;
 }
 
 footer a {
   color: #ffffff;
   display: block;
-  width: 100px;
+  width: 5em;
   margin: 0 auto;
+}
+
+.incomeResult {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+img {
+    display: block;
+}
+
+/*Responsive stuff*/
+.angular_logo {
+    background-image: url('assets/angular-small.png');
+    width: 160px;
+    height: 160px;
+    border: none;
+}
+.resizeResponsive h4, .resizeResponsive p{
+    font-size: 5em;
+}
+
+
+@media only screen and (min-width: 700px) {
+    .angular_logo {
+        background-image: url('assets/angular-big.svg');
+        width: 512px;
+        height: 139px;
+    }
+    .resizeResponsive h4, .resizeResponsive p {
+        font-size: 1em;
+    }
 }
