@@ -1,0 +1,16 @@
+<h2>Wat is mijn maximale hypotheek?</h2>
+<form data-ng-controller="mortgage.mortgageController as mortgage">
+    <fieldset class="input">
+        <h3>Wat is uw bruto jaarinkomen ?</h3>
+        <md-slider aria-label="income" ng-model="mortgage.income" step="1000" id="incomeRange" name="income" min="0" max="100000"></md-slider>
+        <p>€ <span id="incomeDisplay">{{mortgage.income}}</span></p>
+
+        <h3>Wat is het bruto jaarinkomen van uw partner?</h3>
+        <md-slider aria-label="incomePartner" ng-model="mortgage.incomePartner" ng-change="mortgage.changeIncomeResult()" step="1000" id="incomePartnerRange" name="incomePartner" min="0" max="100000"></md-slider>
+        <p>€ <span id="incomePartnerDisplay">{{mortgage.incomePartner}}</span></p>
+    </fieldset>
+    <fieldset class="result">
+        <h3 class="incomeResult">€ <span id="incomeResultAmount">{{mortgage.incomeResultAmount}}</span></h3>
+        <small>Op basis van 2% 10 jaar vaste rente</small>
+    </fieldset>
+</form>

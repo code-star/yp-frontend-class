@@ -67,7 +67,7 @@ img {
 
 /*Responsive stuff*/
 .angular_logo {
-    background-image: url('assets/angular-small.png');
+    background-image: url('../../assets/angular-small.png');
     width: 160px;
     height: 160px;
     border: none;
@@ -79,7 +79,7 @@ img {
 
 @media only screen and (min-width: 700px) {
     .angular_logo {
-        background-image: url('assets/angular-big.svg');
+        background-image: url('../../assets/angular-big.svg');
         width: 512px;
         height: 139px;
     }

@@ -1,40 +1,48 @@
 <!DOCTYPE HTML>
-<html>
+<html data-ng-app="app">
 <head>
 <title>YP - Frontend Example App</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="app/css/style.css" />
+    <link rel="stylesheet" href="app/css/angular-material.min.css" />
 </head>
 <body>
-<div class="container">
-		<header>
-			<h1><a href="#" id="logo">Frontend YP class</a></h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="index.html" class="">Home</a>
-					</li>
-					<li>
-						<a href="#" onclick="loadPageContent('about')" class="">About</a>
-					</li>
-					<li>
-                        <a href="#" onclick="loadPageContent('hypotheek')" class="">Hypotheek</a>
-                    </li>
-					<li>
-						<a href="#" onclick="loadPageContent('responsive')" class="">Responsive</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<section id="mainContent">
-			<h2>Welcome to the YP Frontend class</h2>
-			<p>Lets learn some frontend!</p>
-		</section>
+
+<div class="container" data-ng-controller="Shell as vm">
+    <div data-ng-include="'app/layout/topnav.html'"></div>
+
+    <section id="mainContent">
+        <div ui-view></div>
+    </section>
+
     <footer>
-      <a href="http://codestar.nl">codestar.nl</a>
+        <a href="http://codestar.nl">codestar.nl</a>
     </footer>
 </div>
+
+<!--Angular modules-->
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+<script src="lib/angular-resource.min.js"></script>
+<script src="lib/angular-animate.min.js"></script>
+<script src="lib/angular-aria.min.js"></script>
+<script src="lib/angular-material.min.js"></script>
+
+
+<!--Our app modules-->
+<script src="app/app.module.js"></script>
+<script src="app/app.config.js"></script>
+
+<script src="app/mortgage/mortgage.module.js"></script>
+<script src="app/mortgage/mortgage.service.js"></script>
+<script src="app/mortgage/mortgage.controller.js"></script>
+
+<script src="app/layout/layout.module.js"></script>
+<script src="app/layout/shell.js"></script>
+
+
+<!--Our other libs-->
 <script src="script.js"></script>
 </body>
 </html>
