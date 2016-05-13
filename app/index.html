@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html data-ng-app="app">
+<head>
+<title>YP - Frontend Example App</title>
+<base href="/">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- build:css(app) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1><a href="#" id="logo">{{home.title}}</a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a ui-sref="home">Home</a>
+                </li>
+
+                <li>
+                    <a ui-sref="mortgage">Hypotheek</a>
+                </li>
+                <li>
+                    <a ui-sref="responsive">Responsive</a>
+                </li>
+                <li>
+                    <a ui-sref="about">About</a>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="mainContent">
+        <div ui-view></div>
+    </section>
+    <footer>
+        <a href="http://codestar.nl">codestar.nl</a>
+    </footer>
+</div>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+<script src="scripts/app.module.js"></script>
+<script src="scripts/app.config.js"></script>
+
+<script src="scripts/mortgage/mortgage.module.js"></script>
+<script src="scripts/mortgage/mortgage.service.js"></script>
+<script src="scripts/mortgage/mortgage.controller.js"></script>
+
+<script src="scripts/layout/layout.module.js"></script>
+<script src="scripts/layout/home.controller.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>

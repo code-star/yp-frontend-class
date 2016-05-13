@@ -1,24 +1,10 @@
 (function() {
     'use strict';
-    
-    angular
-        .module('app.mortgage')
-        .controller('mortgage.mortgageController', MortgageController);
-
-    MortgageController.$inject = [
-        'mortgage.mortgageService'
-    ];
 
     function MortgageController(
-        mortgageService
+        // mortgageService
     ){
-       var vm = this;
-
-        vm.changeIncomeResult = changeIncomeResult;
-
-        vm.income = 25000;
-        vm.incomePartner = 0;
-        vm.incomeResultAmount = 87300;
+        var vm = this;
 
         function changeIncomeResult() {
             if(parseInt(vm.incomePartner) < parseInt(vm.income)) {
@@ -29,10 +15,28 @@
             }
         }
 
-        init();
+        vm.changeIncomeResult = changeIncomeResult;
+
+        vm.income = 25000;
+        vm.incomePartner = 0;
+        vm.incomeResultAmount = 87300;
+
 
         function init() {
 
         }
+
+        init();
+
+
     }
+
+    MortgageController.$inject = [
+        'mortgage.mortgageService'
+    ];
+
+    angular
+        .module('app.mortgage')
+        .controller('MortgageController', MortgageController);
+
 }());

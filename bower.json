@@ -1,0 +1,30 @@
+{
+  "name": "yp-frontend_class",
+  "description": "Class material for young professionals to build angular 1 apps.",
+  "main": "app/index.html",
+  "authors": [
+    "Maik Diepenbroek"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "yp-front-end"
+  ],
+  "homepage": "https://github.com/code-star/yp-frontend-class",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "angular-resource": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-material": "^1.0.8"
+  }
+}

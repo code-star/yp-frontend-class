@@ -1,0 +1,58 @@
+{
+  "name": "yp-frontend_class",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "Class material for young professionals to build angular 1 apps.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:code-star/yp-frontend-class.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && webpack --bail --progress --profile",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "test": "karma start",
+    "test-watch": "karma start --auto-watch --no-single-run",
+    "start": "npm run server"
+  },
+  "author": {
+    "name": "Maik Diepenbroek",
+    "email": "maik.diepenbroek@ordina.nl"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-mocks": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-sanitize": "^1.5.5"
+  },
+  "devDependencies": {
+    "angular-ui-router": "^0.2.18",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-htmlmin": "^1.4.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-google-cdn": "^0.4.3",
+    "grunt-newer": "^1.2.0",
+    "grunt-ng-annotate": "^2.0.2",
+    "grunt-ngmin": "0.0.3",
+    "grunt-rev": "^0.1.0",
+    "grunt-svgmin": "^3.2.0",
+    "grunt-usemin": "^3.1.1",
+    "grunt-wiredep": "^3.0.1",
+    "jshint-stylish": "^2.2.0",
+    "load-grunt-tasks": "^3.5.0",
+    "node-libs-browser": "^1.0.0",
+    "time-grunt": "^1.3.0"
+  }
+}

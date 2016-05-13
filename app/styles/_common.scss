@@ -6,11 +6,11 @@ html {
   color: #009;
 }
 .container {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    border: 1px dashed #ccc;
-    padding: 10px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px dashed #ccc;
+  padding: 10px;
 }
 #logo {
   text-decoration: none;
@@ -53,45 +53,45 @@ footer a {
 }
 
 .incomeResult {
-    font-size: 1.5em;
-    margin-bottom: 0;
+  font-size: 1.5em;
+  margin-bottom: 0;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 /*Responsive stuff*/
 .angular_logo {
-    background-image: url('../../assets/angular-small.png');
-    width: 160px;
-    height: 160px;
-    border: none;
+  background-image: url('../images/angular-small.png');
+  width: 160px;
+  height: 160px;
+  border: none;
 }
 .resizeResponsive h4, .resizeResponsive p{
-    font-size: 5em;
+  font-size: 5em;
 }
 
 
 @media only screen and (min-width: 700px) {
-    .angular_logo {
-        background-image: url('../../assets/angular-big.svg');
-        width: 512px;
-        height: 139px;
-    }
-    .resizeResponsive h4, .resizeResponsive p {
-        font-size: 1em;
-    }
+  .angular_logo {
+    background-image: url('../images/angular-big.svg');
+    width: 512px;
+    height: 139px;
+  }
+  .resizeResponsive h4, .resizeResponsive p {
+    font-size: 1em;
+  }
 }
 md-slider ._md-track._md-track-fill,
 md-slider ._md-sign,
 md-slider.md-default-theme ._md-thumb:after,
 md-slider ._md-thumb:after
 {
-    background-color: #e98300;
-    border-color: #e98300;
+  background-color: #e98300;
+  border-color: #e98300;
 }
