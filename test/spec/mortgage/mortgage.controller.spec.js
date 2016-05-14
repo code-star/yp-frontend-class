@@ -16,7 +16,9 @@ describe('controller: MortgageController', function(){
         });
     }));
 
-    it('should always pass', function(){
-        expect(true).toBe(true);
+    it('should contain the correct default values for income', function(){
+        expect(MortgageController.income).toBe(25000);
+        expect(MortgageController.incomePartner).toBe(0);
+        expect(MortgageController.incomeResultAmount).toBe(87300);
     });
 });
