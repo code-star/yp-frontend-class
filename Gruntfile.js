@@ -42,6 +42,10 @@ module.exports = function(grunt){
                     livereload: '<%= connect.options.livereload %>'
                 }
             },
+            jsTest: {
+                files: ['test/spec/**/*.js'],
+                tasks: ['newer:jshint:test', 'karma']
+            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
@@ -153,7 +157,6 @@ module.exports = function(grunt){
                     ]
                 }
         },
-
 
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
@@ -362,6 +365,12 @@ module.exports = function(grunt){
         //   dist: {}
         // },
 
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                singleRun: false
+            }
+        }
 
     });
 
@@ -386,6 +395,13 @@ module.exports = function(grunt){
         grunt.task.run(['serve:' + target]);
     });
 
+    grunt.registerTask('test', [
+        'clean:server',
+        'concurrent:test',
+        'autoprefixer',
+        'connect:test',
+        'karma'
+    ]);
 
     grunt.registerTask('build', [
         'clean:dist',
@@ -406,6 +422,7 @@ module.exports = function(grunt){
 
     grunt.registerTask('default', [
         'newer:jshint',
+        'test',
         'build'
     ]);
 };
