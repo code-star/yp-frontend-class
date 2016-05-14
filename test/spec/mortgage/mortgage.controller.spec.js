@@ -6,12 +6,12 @@ describe('controller: MortgageController', function(){
     // load the controller's module
     beforeEach(module('app'));
 
-    var LoginCtrl, scope;
+    var MortgageController, scope;
 
     // Initialize the controller and a mock scope
     beforeEach(inject(function($controller, $rootScope){
         scope = $rootScope.$new();
-        LoginCtrl = $controller('MortgageController', {
+        MortgageController = $controller('MortgageController', {
             $scope: scope
         });
     }));
