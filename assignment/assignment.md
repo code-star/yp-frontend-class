@@ -26,7 +26,7 @@ Rabobank has some extra requirements that would be interesting to implement in c
 
 * For this assignment Rabobank has developed a **UX** design that has to be leading during implementation.
 * The calculation rule for the maximum mortgage is 4,5 * (users gross yearly income + partners gross yearly income).
-* The mortgage calculator should have a look and feel based on the Rabobank style as enclosed in the assignment resources (colors / logo).
+* The mortgage calculator should have a look and feel based on the Rabobank styleguide as enclosed in the assignment resources (colors / logo).
 * The text that describes the mortgage conditions are included in the assignment resources.
 * Make sure that throughout your whole application you implement a decent error handling for failing http services and faulty user input etc.
 
