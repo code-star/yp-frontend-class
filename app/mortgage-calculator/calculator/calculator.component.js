@@ -16,12 +16,10 @@
 				vm.incomeResultAmount = 87300;
 
 				function changeIncomeResult() {
-					if(parseInt(vm.incomePartner) < parseInt(vm.income)) {
-						vm.incomeResultAmount = parseInt(vm.income) - Math.round(Math.random() * 10000);
-					}
-					else {
-						vm.incomeResultAmount = parseInt(vm.income) + Math.round(Math.random() * 10000);
-					}
+					var income = parseInt(vm.income),
+						partnerIncome = parseInt(vm.incomePartner);
+
+					vm.incomeResultAmount = (income + partnerIncome) * 4.5;
 				}
 
 				init();

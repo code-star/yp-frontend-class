@@ -1,0 +1,12 @@
+<h2>Actuele rente: 2,1 % bij 10 jaar vast</h2>
+<form>
+    <fieldset class="input">
+        <h3>Wat is het gewenste hypotheek bedrag ?</h3>
+        <md-slider class="md-warn" aria-label="mortgage" ng-model="vm.mortgage" ng-change="vm.changeMortgage()" step="1000" id="mortgageRange" name="income" min="0" max="1000000"></md-slider>
+        <p>€ <span id="incomeDisplay">{{vm.mortgage}}</span></p>
+    </fieldset>
+    <fieldset class="result">
+        <h3 class="incomeResult">€ <span id="incomeResultAmount">{{vm.interestPerYear}}</span> bruto per maand</h3>
+        <small>Op basis van 2,1% 10 jaar vaste rente</small>
+    </fieldset>
+</form>

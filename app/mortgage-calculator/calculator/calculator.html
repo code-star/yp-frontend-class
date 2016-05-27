@@ -2,11 +2,11 @@
 <form>
     <fieldset class="input">
         <h3>Wat is uw bruto jaarinkomen ?</h3>
-        <md-slider aria-label="income" ng-model="vm.income" step="1000" id="incomeRange" name="income" min="0" max="100000"></md-slider>
+        <md-slider class="md-warn" aria-label="income" ng-model="vm.income" ng-change="vm.changeIncomeResult()" step="1000" id="incomeRange" name="income" min="0" max="100000"></md-slider>
         <p>€ <span id="incomeDisplay">{{vm.income}}</span></p>
 
         <h3>Wat is het bruto jaarinkomen van uw partner?</h3>
-        <md-slider aria-label="incomePartner" ng-model="vm.incomePartner" ng-change="vm.changeIncomeResult()" step="1000" id="incomePartnerRange" name="incomePartner" min="0" max="100000"></md-slider>
+        <md-slider class="md-warn" aria-label="incomePartner" ng-model="vm.incomePartner" ng-change="vm.changeIncomeResult()" step="1000" id="incomePartnerRange" name="incomePartner" min="0" max="100000"></md-slider>
         <p>€ <span id="incomePartnerDisplay">{{vm.incomePartner}}</span></p>
     </fieldset>
     <fieldset class="result">

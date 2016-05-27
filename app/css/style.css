@@ -1,7 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400);
-
-html {
-  font-family: 'PT Sans', helvetica, arial, sans-serif;
+html * {
+  font-family: arial, sans-serif;
   font-weight: 300;
   color: #009;
 }
@@ -20,8 +18,9 @@ html {
 nav {
   position: relative;
   height: 30px;
-  background: #e98300;
+  background: #009;
 }
+
 nav ul{
   list-style: none;
 }
@@ -39,7 +38,7 @@ section#mainContent {
 }
 
 footer {
-  background: #e98300;
+  background: #009;
   height: 1.5em;
   width: 100%;
   padding: 1em 0;
