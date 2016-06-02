@@ -1,7 +1,7 @@
-<h2>Wat is mijn maximale hypotheek?</h2>
+<h2>Bereken uw maximale hypotheek</h2>
 <form>
     <fieldset class="input">
-        <h3>Wat is uw bruto jaarinkomen ?</h3>
+        <h3>Uw bruto jaarinkomen ?</h3>
         <md-slider class="md-warn" aria-label="income" ng-model="vm.income" ng-change="vm.changeIncomeResult()" step="1000" id="incomeRange" name="income" min="0" max="100000"></md-slider>
         <p>€ <span id="incomeDisplay">{{vm.income}}</span></p>
 
@@ -10,6 +10,7 @@
         <p>€ <span id="incomePartnerDisplay">{{vm.incomePartner}}</span></p>
     </fieldset>
     <fieldset class="result">
+        <div>U kunt maximaal lenen:</div>
         <h3 class="incomeResult">€ <span id="incomeResultAmount">{{vm.incomeResultAmount}}</span></h3>
         <small>Op basis van 2% 10 jaar vaste rente</small>
     </fieldset>

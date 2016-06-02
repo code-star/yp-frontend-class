@@ -3,7 +3,7 @@
 
 	angular
 		.module('mortgage-calculator')
-		.component('responsive', {
+		.component('rente', {
 			templateUrl: 'app/mortgage-calculator/rente/rente.html',
 			controllerAs: 'vm',
 			controller: [function () {

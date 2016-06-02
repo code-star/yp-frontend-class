@@ -8,7 +8,7 @@
 			$routeConfig: [
 				{path: '/calculator', name: 'Calculator', component: 'calculator', useAsDefault: true},
 				{path: '/about', name: 'About', component: 'about' },
-				{path: '/responsive', name: 'Responsive', component: 'responsive' }
+				{path: '/rente', name: 'Rente', component: 'rente' }
 			]
 		});
 
