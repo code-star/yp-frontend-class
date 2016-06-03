@@ -1,0 +1,15 @@
+Background colors of Rabobank pages are white
+
+Font: Arial:
+- text normal 16px font-size
+- titles desktop/tablet: 36px
+- titles mobile phone: 25 px
+
+Use the color #009 (blue) for heading and text
+
+Use the color #fd6400 (orange) as a primary color for important elements like buttons etc.
+
+Logo:
+- use rabobank_logo.png for desktop and tablet
+- use rabobank_logo_mobile.png for mobile phone
+
