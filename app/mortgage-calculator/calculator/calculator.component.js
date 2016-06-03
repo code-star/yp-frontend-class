@@ -9,9 +9,9 @@
 			controller: CalculatorController
 		});
 
-	CalculatorController.$inject = ['$scope', 'MaxMortgageService'];
-	function CalculatorController($scope, MaxMortgageService) {
-		var vm = this;
+	CalculatorController.$inject = ['$scope', '$timeout', 'MaxMortgageService'];
+	function CalculatorController($scope, $timeout, MaxMortgageService) {
+		var vm = this, ignoreIncomeModelUpdate = false, timeoutPromise;
 
 		vm.$onInit = function() {
 			vm.changeIncomeResult = changeIncomeResult;
@@ -23,7 +23,22 @@
 		function setUpIncomeWatch() {
 			$scope.$watch(function() {
 				return vm.income + '-' + vm.incomePartner;
-			}, changeIncomeResult)
+			}, function() {
+				if(ignoreIncomeModelUpdate) {
+					ignoreIncomeModelUpdate = false;
+				} else {
+					if (!timeoutPromise) {
+						queueRequest();
+					} else {
+						$timeout.cancel(timeoutPromise);
+						queueRequest();
+					}
+				}
+			});
+		}
+
+		function queueRequest() {
+			timeoutPromise = $timeout(changeIncomeResult, 600);
 		}
 
 		function handleMaxToLoanResponse(response) {
@@ -31,7 +46,6 @@
 		}
 
 		function changeIncomeResult() {
-			console.log('in change');
 			var income = parseInt(vm.income),
 				partnerIncome = parseInt(vm.incomePartner);
 

@@ -9,19 +9,26 @@
 			controller: RenteController
 		});
 
-	function RenteController() {
+	RenteController.$inject = ['IntrestService'];
+	function RenteController(IntrestService) {
 		var vm = this;
 
 		vm.$onInit = function() {
 			vm.changeMortgage = changeMortgage;
 			vm.mortgage = 180000;
-			changeMortgage();
+			loadInterest();
 		};
+
+		function loadInterest() {
+			IntrestService.getIntrest().then(function(response) {
+				vm.interest = response.currentRate;
+				changeMortgage();
+			});
+		}
 
 		function changeMortgage() {
 			var mortgage = parseInt(vm.mortgage);
-			vm.interestPerYear = Math.floor((mortgage * 0.021) / 12);
+			vm.interestPerYear = Math.floor((mortgage * (vm.interest / 100) / 12));
 		}
 	}
-
 })();

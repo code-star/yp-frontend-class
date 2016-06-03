@@ -3,15 +3,15 @@
 
 	angular
 		.module('mortgage-calculator')
-		.factory('InterestService', InterestService);
+		.factory('IntrestService', IntrestService);
 
-	InterestService.$inject = ['$http'];
-	function InterestService($http) {
+	IntrestService.$inject = ['$http'];
+	function IntrestService($http) {
 		return {
-			getInterest: getInterest
+			getIntrest: getIntrest
 		};
 
-		function getInterest() {
+		function getIntrest() {
 			return $http({
 				method: 'GET',
 				url: 'http://agile-wave-86684.herokuapp.com/current-mortgage-interest-rate'

@@ -72,6 +72,10 @@ h2 {
     font-size: 25px;
 }
 
+.page-title {
+    margin-left: 20px;
+}
+
 
 @media only screen and (min-width: 700px) {
     .rabobank-logo {
@@ -86,13 +90,9 @@ h2 {
         display: inline-block;
         margin-left: 40px;
     }
-}
-md-slider ._md-track._md-track-fill,
-md-slider ._md-sign,
-md-slider.md-default-theme ._md-thumb:after,
-md-slider ._md-thumb:after
-{
-    background-color: #e98300;
-    border-color: #e98300;
+
+    nav ul li a {
+        font-size: 16px;
+    }
 }
 
