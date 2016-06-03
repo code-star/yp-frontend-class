@@ -1,0 +1,13 @@
+<h2>Actuele rente: <span id="currentRate">loading...</span>%</h2>
+<small>Bij 10 jaar rentevast</small>
+<form>
+    <fieldset class="input">
+        <h3>Wat is het gewenste hypotheek bedrag ?</h3>
+        <input type="range" oninput="displayMortgage()" step="1000" value="0" id="mortgageRange" name="income" min="0" max="100000">
+        <p>€ <span id="incomeDisplay">0</span></p>
+    </fieldset>
+    <fieldset class="result">
+        <h3 class="incomeResult">€ <span id="incomeResultAmount">100</span> bruto per maand</h3>
+        <small>Op basis van 2,1% 10 jaar vaste rente</small>
+    </fieldset>
+</form>

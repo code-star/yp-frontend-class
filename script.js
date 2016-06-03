@@ -7,6 +7,9 @@ function loadPageContent(page) {
         }
     };
     xhr.open('GET', 'templates/'+page+'.html');
+    if(page === "rente") {
+        loadMortageRate();
+    }
     xhr.send();
 }
 
@@ -36,4 +39,24 @@ function changeIncomeResult(partnerIncome) {
         incomeResultAmountElement.innerHTML = parseInt(incomeAmount) + Math.round(Math.random() * 10000);
     }
 
+}
+
+function displayMortgage() {
+    var incomeDisplay = document.querySelector('#incomeDisplay');
+    var incomeRange = document.querySelector('#mortgageRange');
+    var incomeResultAmount = document.querySelector('#incomeResultAmount');
+
+    incomeResultAmount.innerHTML = (incomeRange.value / 100) ;
+    incomeDisplay.innerHTML = incomeRange.value;
+}
+
+function loadMortageRate() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById("currentRate").innerHTML = JSON.parse(xhttp.responseText).currentRate;
+        }
+    };
+    xhttp.open("GET", "http://agile-wave-86684.herokuapp.com/current-mortgage-interest-rate", true);
+    xhttp.send();
 }

@@ -1,10 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400);
 
-html {
-  font-family: 'PT Sans', helvetica, arial, sans-serif;
-  font-weight: 300;
-  color: #009;
+html * {
+    font-family: arial, sans-serif;
+    font-weight: 300;
+    color: #009;
 }
+
+header {
+    padding: 0;
+}
+
 .container {
     width: 80%;
     height: auto;
@@ -12,78 +17,82 @@ html {
     border: 1px dashed #ccc;
     padding: 10px;
 }
-#logo {
-  text-decoration: none;
-  color: #e98300;
-}
 
 nav {
-  position: relative;
-  height: 30px;
-  background: #e98300;
-}
-nav ul{
-  list-style: none;
-}
-nav ul li a{
-  text-decoration: none;
-  float: left;
-  margin-right: 1em;
-  color: #ffffff;
-  line-height: 30px;
+    position: relative;
+    height: 30px;
+    background: #009;
 }
 
-section#mainContent {
-  margin-top: 1em;
-  clear: both;
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    padding: 0 6px;
+    pointer: cursor;
+    float: left;
+    margin-right: 1em;
+    color: #ffffff;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+nav ul li a:hover {
+    background-color: blue;
 }
 
 footer {
-  background: #e98300;
-  height: 1.5em;
-  width: 100%;
-  padding: 1em 0;
+    background: #009;
+    height: 1.5em;
+    width: 100%;
+    padding: 1em 0;
 }
 
 footer a {
-  color: #ffffff;
-  display: block;
-  width: 5em;
-  margin: 0 auto;
-}
-
-.incomeResult {
-    font-size: 1.5em;
-    margin-bottom: 0;
+    color: #ffffff;
+    display: block;
+    width: 5em;
+    margin: 0 auto;
 }
 
 fieldset {
     border: none;
 }
 
-img {
-    display: block;
-}
-
 /*Responsive stuff*/
-.angular_logo {
-    background-image: url('assets/angular-small.png');
-    width: 160px;
-    height: 160px;
+.rabobank-logo {
+    background-image: url('img/rabobank-logo-mobile.png');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 33px;
     border: none;
 }
 .resizeResponsive h4, .resizeResponsive p{
-    font-size: 5em;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 25px;
 }
 
 
 @media only screen and (min-width: 700px) {
-    .angular_logo {
-        background-image: url('assets/angular-big.svg');
-        width: 512px;
-        height: 139px;
+    .rabobank-logo {
+        background-image: url('img/rabobank-logo.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 124px;
+        height: 148px;
     }
+
     .resizeResponsive h4, .resizeResponsive p {
         font-size: 1em;
+    }
+
+    header h1 {
+        display: inline-block;
+        margin-left: 40px;
     }
 }
